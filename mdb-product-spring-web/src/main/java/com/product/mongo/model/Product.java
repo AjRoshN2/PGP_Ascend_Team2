@@ -15,7 +15,7 @@ import lombok.NoArgsConstructor;
 
 @Document("product")
 public class Product {
- 
+
 	@Id
 	private BigInteger _id;
 	private BigInteger id;
@@ -47,7 +47,5 @@ public class Product {
 	private BigInteger discount;
 	private String isHazardous;
 	private String isReturnable;
-	
+
 }
-
-

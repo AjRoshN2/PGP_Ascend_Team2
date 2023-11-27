@@ -13,8 +13,7 @@ import lombok.NoArgsConstructor;
 @Data
 @Document("Category")
 public class Category {
- 
+
 	private String category;
 
 }
-

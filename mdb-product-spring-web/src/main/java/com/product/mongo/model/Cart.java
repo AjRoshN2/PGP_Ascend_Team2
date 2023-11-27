@@ -1,5 +1,7 @@
 package com.product.mongo.model;
 
+import java.math.BigInteger;
+
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import lombok.AllArgsConstructor;
@@ -9,12 +11,11 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-@Document("User")
-public class User {
-
-	private String email;
-	private String password;
-	private String avtar;
-	private String[] favoriteCategories;
+@Document("Cart")
+public class Cart {
+ 
+	private BigInteger itemId;
+	private BigInteger quantity;
 
 }
+

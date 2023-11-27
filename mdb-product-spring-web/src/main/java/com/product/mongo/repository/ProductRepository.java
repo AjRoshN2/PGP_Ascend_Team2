@@ -19,7 +19,10 @@ public interface ProductRepository extends MongoRepository<Product, BigInteger> 
 	List<Product> findByProductCategory(String pcategory);
 
 	@Query("{title:{$regex:'?0'}}, {productName:{$regex:'?0'}}}")
-	List<Product> findProductsByTItleAndName(String searchCriterion);
+	List<Product> findProductsByTitleAndName(String searchCriterion);
+	
+	@Query("{title:{$regex:'?0'}}, {productName:{$regex:'?0'}}, {shortDescription:{$regex:'?0'}}}")
+	List<Product> findProductsByTitleNameOrShortDesc(String searchCriterion);
 
 	@Query("{}")
 	List<Product> getAllProducts();

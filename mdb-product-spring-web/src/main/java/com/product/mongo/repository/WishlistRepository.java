@@ -6,14 +6,14 @@ import java.util.List;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.mongodb.repository.Query;
 
+import com.product.mongo.model.Cart;
 import com.product.mongo.model.Category;
 import com.product.mongo.model.User;
+import com.product.mongo.model.Wishlist;
 
-public interface CategoryRepository  extends MongoRepository<Category, BigInteger> {
-	
-    
-    @Query("{}")
-    List<Category> getAllCategories();
+public interface WishlistRepository extends MongoRepository<Wishlist, BigInteger> {
 
+	@Query("{}")
+	List<Wishlist> getAllItemsInWishlist();
 
 }
