@@ -65,15 +65,15 @@ public class ProductController {
 		return productService.getAllProducts();
 	}
 	
-	@CrossOrigin
-	@GetMapping("itemsInCart")
-	public List<Cart> getAllItemsInCart() {
-		return productService.getAllItemsInCart();
-	}
-	
-	@CrossOrigin
-	@GetMapping("itemsInCart")
-	public List<Wishlist> getAllItemsInWishlist() {
-		return productService.getAllItemsInWishlist();
-	}
+//	@CrossOrigin
+//	@GetMapping("itemsInCart")
+//	public List<Cart> getAllItemsInCart() {
+//		return productService.getAllItemsInCart();
+//	}
+//	
+//	@CrossOrigin
+//	@GetMapping("itemsInCart")
+//	public List<Wishlist> getAllItemsInWishlist() {
+//		return productService.getAllItemsInWishlist();
+//	}
 }

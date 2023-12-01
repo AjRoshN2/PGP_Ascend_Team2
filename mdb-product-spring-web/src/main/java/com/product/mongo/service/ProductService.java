@@ -24,8 +24,8 @@ public interface ProductService {
 
 	public List<Product> getAllProducts();
 
-	public List<Cart> getAllItemsInCart();
-
-	public List<Wishlist> getAllItemsInWishlist();
+//	public List<Cart> getAllItemsInCart();
+//
+//	public List<Wishlist> getAllItemsInWishlist();
 
 }

@@ -72,14 +72,14 @@ public class ProductSerivceImpl implements ProductService {
 		return productRepository.findProductsByTitleAndName(searchCriterion);
 	}
 
-	@Override
-	public List<Cart> getAllItemsInCart() {
-		return cartRepository.getAllItemsInCart();
-	}
-
-	@Override
-	public List<Wishlist> getAllItemsInWishlist() {
-		return wishlistRepository.getAllItemsInWishlist();
-	}
+//	@Override
+//	public List<Cart> getAllItemsInCart() {
+//		return cartRepository.getAllItemsInCart();
+//	}
+//
+//	@Override
+//	public List<Wishlist> getAllItemsInWishlist() {
+//		return wishlistRepository.getAllItemsInWishlist();
+//	}
 
 }
