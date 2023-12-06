@@ -9,11 +9,9 @@ import org.springframework.data.mongodb.repository.Query;
 import com.product.mongo.model.Category;
 import com.product.mongo.model.User;
 
-public interface CategoryRepository  extends MongoRepository<Category, BigInteger> {
-	
-    
-    @Query("{}")
-    List<Category> getAllCategories();
+public interface CategoryRepository extends MongoRepository<Category, BigInteger> {
 
+	@Query("{}")
+	List<Category> getAllCategories();
 
 }

@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -64,16 +65,39 @@ public class ProductController {
 	public List<Product> getAllProducts() {
 		return productService.getAllProducts();
 	}
+	@CrossOrigin
+	@GetMapping("allItemsInCart")
+	public List<Cart> getAllItemsInCart() {
+		return productService.getAllItemsInCart();
+	}
 	
-//	@CrossOrigin
-//	@GetMapping("itemsInCart")
-//	public List<Cart> getAllItemsInCart() {
-//		return productService.getAllItemsInCart();
-//	}
-//	
-//	@CrossOrigin
-//	@GetMapping("itemsInCart")
-//	public List<Wishlist> getAllItemsInWishlist() {
-//		return productService.getAllItemsInWishlist();
-//	}
+	@CrossOrigin
+	@GetMapping("allItemsInWishlist")
+	public List<Wishlist> getAllItemsInWishlist() {
+		return productService.getAllItemsInWishlist();
+	}
+	
+	@CrossOrigin
+	@PostMapping("addItemToWishlist/{itemId}")
+	public void addItemToWishlist(@PathVariable("itemId") String itemId) {
+		productService.addItemToWishlist(itemId);
+	}
+	
+	@CrossOrigin
+	@PostMapping("deleteItemFromWishlist/{itemId}")
+	public void deleteItemFromWishlist(@PathVariable("itemId") String itemId) {
+		productService.deleteItemFromWishlist(itemId);
+	}
+	
+	@CrossOrigin
+	@PostMapping("addItemToCart/{itemId}")
+	public void addItemToCart(@PathVariable("itemId") String itemId) {
+		productService.addItemToCart(itemId);
+	}
+	
+	@CrossOrigin
+	@PostMapping("reduceQuantityForItemInCart/{itemId}")
+	public void reduceQuantityForItemInCart(@PathVariable("itemId") String itemId) {
+		productService.reduceQuantityForItemInCart(itemId);
+	}
 }

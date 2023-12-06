@@ -15,5 +15,11 @@ public interface WishlistRepository extends MongoRepository<Wishlist, BigInteger
 
 	@Query("{}")
 	List<Wishlist> getAllItemsInWishlist();
+	
+	/*
+	 * @Query("{}") Wishlist addItemToWishlist(BigInteger itemId);
+	 * 
+	 * @Query("{}") Wishlist deleteItemFromWishlist(BigInteger itemId);
+	 */
 
 }

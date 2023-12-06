@@ -24,8 +24,18 @@ public interface ProductService {
 
 	public List<Product> getAllProducts();
 
-//	public List<Cart> getAllItemsInCart();
-//
-//	public List<Wishlist> getAllItemsInWishlist();
+	public List<Cart> getAllItemsInCart();
 
+	public List<Wishlist> getAllItemsInWishlist();
+	
+	public void addItemToWishlist(String itemId);
+	
+	public void deleteItemFromWishlist(String itemId);
+	
+	public void addItemToCart(String itemId);
+	
+	public void deleteItemFromCart(String itemId);
+	
+	public void reduceQuantityForItemInCart(String itemId);
+	
 }

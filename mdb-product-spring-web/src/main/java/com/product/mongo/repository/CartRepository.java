@@ -7,12 +7,23 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.mongodb.repository.Query;
 
 import com.product.mongo.model.Cart;
-import com.product.mongo.model.Category;
-import com.product.mongo.model.User;
 
 public interface CartRepository extends MongoRepository<Cart, BigInteger> {
 
 	@Query("{}")
 	List<Cart> getAllItemsInCart();
+	
+	/*
+	 * @Query("{}") Wishlist addItemToCart(BigInteger itemId);
+	 * 
+	 * @Query("{}") Wishlist addQuantityForItemInCart(BigInteger itemId);
+	 * 
+	 * @Query("{}") Wishlist reduceQuantityForItemInCart(BigInteger itemId);
+	 * 
+	 * @Query("{}") Wishlist deleteItemFromCart(BigInteger itemId);
+	 */
+	
+	@Query("{itemId:'?0'}")
+	Cart getItemInCart(BigInteger itemId);
 
 }
